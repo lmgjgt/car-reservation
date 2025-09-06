@@ -1,30 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>حجز سيارة</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حجز سيارة</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="book_car">
-  <div class="overlay">
-    <h1>حجز سيارة</h1>
-    <form id="bookingForm" class="card">
-      <label>الاسم
-        <input type="text" id="name" required />
-      </label>
-      <label>التاريخ
-        <input type="date" id="date" required />
-      </label>
-      <label>الوقت
-        <input type="time" id="time" required />
-      </label>
-      <button type="submit" class="btn">حجز</button>
-      <p id="message" class="note"></p>
-    </form>
-
-    <a class="link" href="index.html">العودة للصفحة الرئيسية</a>
-  </div>
-  <script src="script.js"></script>
+<div class="overlay">
+  <h2>حجز سيارة</h2>
+  <input type="text" id="name" placeholder="الاسم"><br><br>
+  <input type="date" id="date"><br><br>
+  <input type="time" id="time"><br><br>
+  <button onclick="bookCar()">حجز</button>
+  <p id="message" class="note"></p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
