@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>طلبات السيارات - المسؤول</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحة المسؤول</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="admin_car">
-  <div class="overlay">
-    <h1>طلبات السيارات</h1>
-
-    <div class="card light">
-      <div class="filters">
-        <input type="date" id="filterDate" />
-        <input type="text" id="filterName" placeholder="بحث بالاسم" />
-        <button class="btn sm" onclick="applyFilters()">تصفية</button>
-        <button class="btn sm outline" onclick="resetFilters()">إعادة الضبط</button>
-      </div>
-    </div>
-
-    <div id="reservationList" class="list"></div>
-
-    <a class="link" href="index.html">العودة للصفحة الرئيسية</a>
-  </div>
-  <script src="script.js"></script>
+<div class="overlay">
+  <h2>صفحة المسؤول</h2>
+  <input type="text" id="adminSearch" placeholder="ادخل الاسم للبحث">
+  <button onclick="adminCheck()">بحث</button>
+  <div id="adminResults"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
