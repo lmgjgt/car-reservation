@@ -1,15 +1,22 @@
-/* استيراد خط Cairo من Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
 body, html {
   height: 100%;
   margin: 0;
   font-family: 'Cairo', sans-serif;
+  color: #2f8f4e;
+}
+
+body.index {
   background: url('logo.png') no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #2f8f4e;
+}
+
+body.book_car,
+body.status,
+body.admin_car {
+  background: url('background_all.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .overlay {
@@ -21,6 +28,13 @@ body, html {
   align-items: center;
   text-align: center;
   padding: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
 button {
