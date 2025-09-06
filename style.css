@@ -1,0 +1,136 @@
+/* خط JanaLT (اختياري: أضيفي ملف JanaLT.woff2 في نفس المجلد) */
+@font-face{
+  font-family: 'JanaLT';
+  src: url('JanaLT.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root{
+  --green:#28a745;
+  --green-dark:#218838;
+  --text:#2f8f4e;
+  --white: #ffffff;
+  --overlay: rgba(255,255,255,.6);
+  --shadow: 0 8px 20px rgba(0,0,0,.08);
+  --radius: 10px;
+}
+
+*{box-sizing:border-box}
+
+html, body{
+  height:100%;
+  margin:0;
+  font-family: 'JanaLT', 'Cairo', Arial, sans-serif;
+  color: var(--text);
+}
+
+/* خلفيات الصفحات */
+body.index{
+  background: url('logo.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.book_car,
+body.admin_car,
+body.status{
+  background: url('background_all.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* طبقة شفافة */
+.overlay{
+  min-height:100%;
+  background-color: var(--overlay);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  text-align:center;
+  padding:24px;
+}
+
+/* بطاقات */
+.card{
+  background: var(--white);
+  padding:20px;
+  width:min(520px, 92vw);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align:right;
+}
+.card.light{ background: rgba(255,255,255,.85); }
+
+h1{ margin: 0 0 8px; color: var(--text); }
+
+/* حقول */
+label{ display:block; text-align:right; margin:10px 0; font-weight:600; }
+input, select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  margin-top:6px;
+  font-size:16px;
+}
+
+/* أزرار */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border:none;
+  border-radius:8px;
+  background: var(--green);
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:700;
+  transition:.18s ease-in-out;
+}
+.btn:hover{ background: var(--green-dark); }
+.btn.outline{
+  background:transparent;
+  color: var(--green-dark);
+  border:2px solid var(--green);
+}
+.btn.sm{ padding:8px 12px; font-size:14px; }
+
+/* روابط */
+.link{
+  color:#0b5ed7;
+  text-decoration:none;
+}
+.link:hover{ text-decoration:underline; }
+
+/* قوائم الطلبات */
+.list{
+  width:min(780px, 96vw);
+  margin-inline:auto;
+  display:grid;
+  gap:12px;
+  text-align:right;
+}
+
+.res-item{
+  background:#fff;
+  border-radius:10px;
+  box-shadow: var(--shadow);
+  padding:14px;
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:center;
+  gap:10px;
+}
+.res-meta{
+  line-height:1.7;
+}
+.res-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.note{ color:#1f7a36; font-weight:600; margin:8px 0 0; }
+
+.links{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+.filters{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-start; }
